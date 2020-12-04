@@ -68,3 +68,8 @@ project(libcamera-jpeg)
 
 add_executable(libcamera-jpeg libcamera_jpeg.cpp)
 target_link_libraries(libcamera-jpeg common "${LIBCAMERA_LIBRARY}" "${IPA_RPI_LIBRARY}" exif jpeg ${Boost_LIBRARIES} pthread "${X11_LIBRARIES}" "${EPOXY_LIBRARY}" "${DRM_LIBRARY}")
+
+project(libcamera-hdr)
+
+add_executable(libcamera-hdr libcamera_hdr.cpp pwl.cpp histogram.cpp hdr.cpp)
+target_link_libraries(libcamera-hdr common "${LIBCAMERA_LIBRARY}" "${IPA_RPI_LIBRARY}" exif jpeg ${Boost_LIBRARIES} pthread "${X11_LIBRARIES}" "${EPOXY_LIBRARY}" "${DRM_LIBRARY}")
